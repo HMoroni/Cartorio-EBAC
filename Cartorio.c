@@ -82,7 +82,7 @@ int Consultar()
 
     while(fgets(conteudo, 200, file) != NULL)
     {
-        printf("\nEssas são as informações de usário:\n ");
+        printf("\nEssas são as informações de usuário:\n ");
         printf("%s", conteudo);
         printf("\n\n");
     }
@@ -105,9 +105,9 @@ int Deletar()
     if(file == NULL);
     {
         printf("O usurio não esta cadastrado no sistema.\n");
-        system("pause");
-        
+        system("pause");   
     }
+
     
 }
 
@@ -124,7 +124,9 @@ int main() //função principal do menu
         printf("Escolha a opção desejada do menu\n\n");
         printf("\t1 - Registro nomes\n");
         printf("\t2 - Consultar nomes\n");
-        printf("\t3 - Deletar nomes\n\n");//Fim do menu
+        printf("\t3 - Deletar nomes\n");//Fim do menu
+        printf("\t4 - Sair do menu\n\n");
+        printf("Esse Software foi criado por Henrique Moroni\n");
 
         scanf("%d", &opcao); //Armazenando a escolha do usuario
 
@@ -144,12 +146,17 @@ int main() //função principal do menu
             Deletar();
             break;
 
+            case 4:
+            printf("Obrigado por utilizar o sistema!");
+            return 0;
+
+
             default:
             printf("Por favor escolha uma opção valida\n\n");
             system("pause");
             break;
         }
 
-        printf("Esse Software foi criado por Henrique Moroni\n");
+       
     }
 }
